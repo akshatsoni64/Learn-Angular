@@ -9,7 +9,16 @@
   
     <div class="collapse navbar-collapse" id="navb">
       <ul class="navbar-nav mr-auto">
-        <app-nav-item *ngFor="let link of links" [linktext]="link" [rl]="link"></app-nav-item>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/contact">Contact</a>
+        </li>
       </ul>
       <app-nav-search></app-nav-search>
     </div>

@@ -5,23 +5,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ContentComponent } from './content/content.component';
-import { NavItemComponent } from './nav-item/nav-item.component';
 import { NavSearchComponent } from './nav-search/nav-search.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
-  { path: "", component: AppComponent },
-  { path: "home", component: AppComponent },
-  { path: "about", component: AppComponent },
-  { path: "contact", component: AppComponent }
+  { path: "", component: ContentComponent },
+  { path: "home", component: ContentComponent },
+  { path: "about", component: AboutComponent },
+  { path: "contact", component: ContentComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    NavItemComponent,
     NavSearchComponent,
-    ContentComponent
+    ContentComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
