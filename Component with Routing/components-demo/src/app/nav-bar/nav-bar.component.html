@@ -2,16 +2,14 @@
     class="navbar navbar-expand-lg navbar-dark"
     style="background: linear-gradient(90deg, rgba(27,22,98,1) 0%, rgba(72,0,115,1) 37%, rgba(255,0,12,1) 100%);"
 >
-    <a class="navbar-brand" href="javascript:void(0)">{{ title }}</a>
+    <a class="navbar-brand" routerLink="">{{ title }}</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
       <span class="navbar-toggler-icon"></span>
     </button>
   
     <div class="collapse navbar-collapse" id="navb">
       <ul class="navbar-nav mr-auto">
-        <app-nav-item></app-nav-item>
-        <app-nav-item></app-nav-item>
-        <app-nav-item></app-nav-item>
+        <app-nav-item *ngFor="let link of links" [linktext]="link" [rl]="link"></app-nav-item>
       </ul>
       <app-nav-search></app-nav-search>
     </div>
