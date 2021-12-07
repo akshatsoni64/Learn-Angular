@@ -1,0 +1,20 @@
+<h1 class="text-center pb-5">Personal Information</h1>
+
+<form
+    [formGroup]="info_form"
+    (ngSubmit)="onFormSubmit()"
+>
+    Name:
+    <input type="text" formControlName="name" class="form-control">
+    Email:
+    <input type="text" formControlName="email" class="form-control">
+    Mobile:
+    <input type="number" max=9999999999 formControlName="mobile" class="form-control">
+    <input type="submit" value="Submit" class="btn btn-primary mt-4">
+</form>
+<div *ngIf="showInfo" class="container">
+    <h1 class="text-center"></h1>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Mobile: {{ mobile }}</p>
+</div>
